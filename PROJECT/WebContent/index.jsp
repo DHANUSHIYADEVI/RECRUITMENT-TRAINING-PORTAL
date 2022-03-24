@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +37,11 @@
               <img src="images/c.png">
               <div class="container">
                   <h2>C</h2>
-                  <p><button class="button">Take Test</button></p>
+                  <s:form action="ShowStartPage" theme="simple">
+                      <p style="display:none;">
+                      <s:textfield name="QuestionsBasedOn" value="C"></s:textfield> </p>
+                      <p><button class="button">Take Test</button></p>
+                  </s:form>
               </div>
          </div>
       </div>
@@ -45,7 +50,11 @@
               <img src="images/c++.png">
               <div class="container">
                   <h2>C++</h2>
-                  <p><button class="button">Take Test</button></p>
+                  <s:form action="ShowStartPage" theme="simple">
+                      <p style="display:none;">
+                      <s:textfield name="QuestionsBasedOn" value="C++"></s:textfield> </p>
+                      <p><button class="button">Take Test</button></p>
+                  </s:form>
               </div>
          </div>
       </div>
@@ -54,7 +63,11 @@
               <img src="images/java.png">
               <div class="container">
                   <h2>JAVA</h2>
-                  <p><button class="button">Take Test</button></p>
+                   <s:form action="ShowStartPage" theme="simple">
+                      <p style="display:none;">
+                      <s:textfield name="QuestionsBasedOn" value="JAVA"></s:textfield> </p>
+                      <p><button class="button">Take Test</button></p>
+                  </s:form>
               </div>
          </div>
       </div>
@@ -63,7 +76,11 @@
               <img src="images/python.png">
               <div class="container">
                   <h2>Python</h2>
-                  <p><button class="button">Take Test</button></p>
+                   <s:form action="ShowStartPage" theme="simple">
+                      <p style="display:none;">
+                      <s:textfield name="QuestionsBasedOn" value="PYTHON"></s:textfield> </p>
+                      <p><button class="button">Take Test</button></p>
+                  </s:form>
               </div>
          </div>
       </div>
@@ -72,7 +89,11 @@
               <img src="images/collapsed.png">
               <div class="container">
                   <h2>Collpased</h2>
-                  <p><button class="button">Take Test</button></p>
+                  <s:form action="ShowStartPage" theme="simple">
+                      <p style="display:none;">
+                      <s:textfield name="QuestionsBasedOn" value="mix"></s:textfield> </p>
+                      <p><button class="button">Take Test</button></p>
+                  </s:form>
               </div>
          </div>
       </div>

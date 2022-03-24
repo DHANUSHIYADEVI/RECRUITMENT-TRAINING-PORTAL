@@ -4,11 +4,37 @@
    "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
    <package name="PROJECT" extends="struts-default">
+      <interceptors>
+         <interceptor name="authenticateInterceptor" class="com.interceptors.AuthenticationInterceptor"/>
+      </interceptors>
       <action name="MoveToLogin">
         <result>login.jsp</result>
       </action>
       <action name="MoveToSignUp">
          <result> signup.jsp </result>
       </action>
-   </package>
+      <action name="Login" class="com.action.LoginAction">
+         <result name="success">index.jsp</result>
+         <result name="admin">admin_page.jsp</result>
+         <result name="not_an_admin">login.jsp</result>
+         <result name="invalid">login.jsp</result>
+         <result name="no user">signup.jsp</result>
+         <result name="error">login.jsp</result>
+      </action>
+      <action name="AddNewUser" class="com.action.RegisterAction">
+          <result name="success">login.jsp</result>
+          <result name="username_exists">signup.jsp</result>
+          <result name="error">signup.jsp</result>
+      </action>
+      <action name="ShowStartPage" class="com.action.MakeStartPage">
+        <result name="success">StartPage.jsp</result>
+        <result name="error">ErrorPage.jsp</result>
+      </action>
+      <action name="StartTest" class="com.action.MakeQuestions"> 
+        <result>TestPage.jsp</result>
+      </action>
+      <action name="modifyQuestions">
+        <result>manipulateQuestions.jsp</result>
+      </action>
+    </package>
 </struts>
